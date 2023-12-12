@@ -23,7 +23,6 @@ jobs:
         run: kubectl apply -f k8s-node-app.yml
       - name: Test service URLs
         run: |
-          # minikube service list
-          kubectl service list
+          minikube service list
+          kubectl get services
           # minikube service nodejs-app --url
-          kubectl service nodejs-app --url

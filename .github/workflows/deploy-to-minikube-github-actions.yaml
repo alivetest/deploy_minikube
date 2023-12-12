@@ -26,4 +26,4 @@ jobs:
           minikube service list
           # kubectl get services nodejs-app-svc
           minikube service nodejs-app-svc --url
-          minikube logs
+          minikube logs --file=logs.txt

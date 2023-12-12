@@ -24,8 +24,6 @@ jobs:
       - name: Test service URLs
         run: |
           minikube service list
-          # kubectl get services nodejs-app
+          # Delay for wait until a pod is running
           sleep 10
-          kubectl get pods
           minikube service nodejs-app --url
-          minikube logs --file=logs.txt
